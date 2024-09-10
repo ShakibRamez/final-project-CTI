@@ -3,17 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services and Progress</title>
+    <title>Technology Gallery</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/style.css">
+    <!-- <<<<<<<<<<<<<<<<<<<<<<<Custom CSS>>>>>>>>>>>>>>>>>>>>>>>> -->
+    <style>
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            color: #fff;
+            text-align: center;
+            margin-top: 40%;
+        }
+    </style>
 </head>
 <body>
-
-
-      <!-- Sticky Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
             <!-- Site Logo -->
             <a class="navbar-brand" href="#">
@@ -31,13 +68,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="services.html">Services</a>
+                        <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -58,74 +95,106 @@
             </div>
         </div>
     </nav>
-
-    <!-- Services Section -->
-    <section id="services" class="container mt-5">
-        <h2 class="text-center mb-4">Our Services</h2>
-        <div class="row">
-            <!-- Service 1 -->
+    <!-- <<<<<<<<<<<<<<<Technology Gallery Section>>>>>>>>>>>>>>>>>> -->
+    <section id="tech-gallery" class="container mt-5">
+        <h2 class="text-center mb-4">Our Latest Technology</h2>
+        <div class="row g-4">
+            <!-- <<<<<<<<<<<<<<<Gallery Items>>>>>>>>>>>>>>> -->
             <div class="col-md-4">
-                <div class="card service-card">
-                    <img src="images/second.png" class="card-img-top" alt="Service 1 Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Web Development</h5>
-                        <p class="card-text">We build dynamic and responsive websites to meet your business needs.</p>
-                        <a href="#" class="btn">Learn More</a>
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal1">
+                    <img src="images/first.jpg" alt="AI Technology" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4>AI Technology</h4>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 2 -->
             <div class="col-md-4">
-                <div class="card service-card">
-                    <img src="images/webdeveloper.jpg" class="card-img-top" alt="Service 2 Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Graphic Design</h5>
-                        <p class="card-text">Our design team delivers visually stunning and professional graphics for your brand.</p>
-                        <a href="#" class="btn">Learn More</a>
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal2">
+                    <img src="images/webdeveloper.jpg" alt="Blockchain" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4>Blockchain Solutions</h4>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 3 -->
             <div class="col-md-4">
-                <div class="card service-card">
-                    <img src="images/first.jpg" class="card-img-top" alt="Service 3 Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Digital Marketing</h5>
-                        <p class="card-text">We help you grow your online presence with data-driven digital marketing strategies.</p>
-                        <a href="#" class="btn">Learn More</a>
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal3">
+                    <img src="images/webdeveloper.jpg" alt="IoT Devices" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4>IoT Devices</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal4">
+                    <img src="images/second.png" alt="5G Technology" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4>5G Technology</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal5">
+                    <img src="images/first.jpg" alt="VR/AR Solutions" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4>VR/AR Solutions</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal6">
+                    <img src="images/second.png" alt="Quantum Computing" class="img-fluid">
+                    <div class="gallery-overlay">
+                        <h4>Quantum Computing</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Progress Section -->
-    <section id="progress" class="container progress-section">
-        <h2 class="text-center mb-4">Project Progress</h2>
-        <div class="row">
-            <div class="col-md-12">
-                <h5>Website Development</h5>
-                <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+    <!-- <<<<<<<<<<<<<<<<<<Modals>>>>>>>>>>>>>>>>> -->
+    <div class="modal fade" id="galleryModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img src="images/webdeveloper.jpg" alt="AI Technology" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
-            <div class="col-md-12">
-                <h5>IT/Information Tecnology</h5>
-                <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <h5>Computer Enginearing </h5>
-                <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">90%</div>
-                </div>
-            </div>
-            
         </div>
-    </section>
+    </div>
+
+    <div class="modal fade" id="galleryModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img src="images/second.png" alt="Blockchain Solutions" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="galleryModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img src="images/first.jpg" alt="IoT Devices" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer mt-5">
         <div class="container">
@@ -167,7 +236,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

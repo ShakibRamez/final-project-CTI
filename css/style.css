@@ -1,0 +1,63 @@
+/* ................nav and content................ */
+
+body {
+    padding-top: 70px; 
+}
+
+button,.btn{
+  background-color: #0f04a3;
+  color: white;
+}
+
+
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+
+.card{
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+img{
+    border-top-right-radius: 1%;
+    border-top-left-radius: 1%;
+  }  
+
+  .card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+  /* ...............Footer styling................. */
+  .footer {
+    background-color: #0f04a3;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+.social-links a {
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: #0f04a3;
+    background-color: #0f04a3;
+}
+
+.social-links a:hover {
+    color: #0f04a3;
+}
+

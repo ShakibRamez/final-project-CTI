@@ -61,3 +61,24 @@ img{
     color: #0f04a3;
 }
 
+
+/* blog or news page */
+.post-card {
+  margin-bottom: 30px;
+}
+
+.post-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.sidebar {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.pagination {
+  justify-content: center;
+}

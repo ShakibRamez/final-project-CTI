@@ -5,7 +5,7 @@ body {
 }
 
 button,.btn{
-  background-color: #0f04a3;
+  background-color: #001861;
   color: white;
 }
 
@@ -35,7 +35,7 @@ img{
 
   /* ...............Footer styling................. */
   .footer {
-    background-color: #0f04a3;
+    background-color: #001861;
     color: white;
     padding: 40px 0;
 }
@@ -53,12 +53,12 @@ img{
 .social-links a {
     margin-right: 15px;
     font-size: 1.5rem;
-    color: #0f04a3;
-    background-color: #0f04a3;
+    color: #001861;
+    background-color: #001861;
 }
 
 .social-links a:hover {
-    color: #0f04a3;
+    color: #001861;
 }
 
 
@@ -77,6 +77,53 @@ img{
   background-color: #f8f9fa;
   border-radius: 10px;
   margin-bottom: 30px;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+/* contact page */
+.contact-info {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact-info h5 {
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.map {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
 }
 
 .pagination {
